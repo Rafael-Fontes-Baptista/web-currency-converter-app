@@ -1,6 +1,6 @@
 # The Project
 
-**Web Currency Converter** is a small but fun web application to develop. As a user, you can convert currencies with a real-time rate updated by the ExchangeRate-API (https://app.exchangerate-api.com/).
+**Web Currency Converter** is a small and nice web application to develop. As a user, you can convert currencies with a real-time rate updated by the ExchangeRate-API (https://app.exchangerate-api.com/).
 
 All conversions can be done both ways, converting **from base** currency **to target** currency as well as **in reverse way**. Also, conversions are done automatically when the user selects the two criterias needed to make a conversion.
 
@@ -29,11 +29,13 @@ To finish the app development phase, I took one last and important step.
 
 #### ✅ **Step 4: Feedback and Improvements**
 
-Once the UI and the converter feature was built, I asked a few people to **use the app**. I got a few interesting feedbacks to improve the user experience. Lasty, I went through all the code to find **points of improvement**. And after refactoring it, the code looked much cleaner and more readable.
+Once the UI and the converter feature were built, I asked a few people to **use the app**. I got a few interesting feedbacks to improve the user experience. Lasty, I went through all the code to find **points of improvement**. And after refactoring it, the code looked much cleaner and more readable.
 
 Even so, there is a lot to improve and learn.
 Any suggestion is always welcome.
 
 # The Result
 
-Developing the **Web Currency Converter** app was a rich experience for me as junior developer, I could increase my skills in programming and have fun too. I hope you also like it and check out the **deployed version** at the link below:
+Developing the **Web Currency Converter** app was a rich experience for me as a junior developer, I could increase my skills and have some fun too. I hope you like it and check out the **deployed version** at the link below:
+
+#### APP ACCESS: https://web-currency-converter.netlify.app/
