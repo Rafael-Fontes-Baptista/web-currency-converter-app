@@ -1,0 +1,14 @@
+.converter-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #233e8b;
+  color: white;
+  width: 100%;
+  margin: 0;
+}
+
+.converter-title h1 {
+  padding: 10px 0;
+  font-size: 1.5rem;
+}
