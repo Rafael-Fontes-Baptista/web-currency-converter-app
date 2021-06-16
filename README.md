@@ -7,7 +7,7 @@ All conversions can be done both ways, converting **from base** currency **to ta
 **(1)** Amount for base or target
 **(2)** Both base and target currencies
 
-![IMAGE](https://github.com/Rafael-Fontes-Baptista/test-readme/blob/master/images/app-screen-view.png)
+![IMAGE](https://github.com/Rafael-Fontes-Baptista/web-currency-converter-app/blob/master/public/app-view-screen.png?raw=true)
 
 # The Process
 
@@ -19,7 +19,7 @@ Before I even started designing the first scopes, I did a quick internet search 
 
 After some drawing, I created the **Wireframe** and the **React Component Tree** using the **Balsamiq Cloud** tool (https://balsamiq.cloud/). This tool is super easy to use and helped me organize the main ideas for the project.
 
-![IMAGE](https://github.com/Rafael-Fontes-Baptista/test-readme/blob/master/images/wireframe-and-component-tree.png)
+![IMAGE](https://github.com/Rafael-Fontes-Baptista/web-currency-converter-app/blob/master/public/wireframe-and-component-tree.png?raw=true)
 
 #### 👨🏻‍💻 **Step 3: Development**
 
