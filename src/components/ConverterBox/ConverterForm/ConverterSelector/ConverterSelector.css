@@ -1,0 +1,33 @@
+.converter-selector {
+  margin: 10px 0;
+}
+
+.converter-selector select:focus,
+.converter-selector input:focus {
+  outline: none;
+}
+
+.converter-selector input {
+  border: 1px solid #233e8b;
+  padding: 15px 15px;
+  width: 110px;
+  background-color: transparent;
+  font-size: 1.2rem;
+}
+
+.converter-selector select {
+  border: none;
+  border-top: 1px solid #233e8b;
+  padding: 17px 0 17px 8px;
+  min-width: 86px;
+  background-color: #233e8b;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.converter-selector-title p {
+  margin: 3px;
+  text-align: left;
+  font-size: 1rem;
+}
