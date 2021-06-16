@@ -5,7 +5,7 @@ export default function ConverterSelector(props) {
   const inputName = `${props.name}Amount`
   const selectName = `${props.name}Acronym`
   const currencyList = props.currencyList
-  const mostPopularAcronyms = ["EUR", "USD", "GBP", "JPY", "AUD", "BRL"]
+  const mostPopularAcronyms = ["EUR", "USD", "GBP", "JPY", "BRL"]
   const mostPopularCurrencies = currencyList.filter((item) =>
     mostPopularAcronyms.includes(item.acronym)
   )

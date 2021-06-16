@@ -12,14 +12,13 @@ export default function ConverterBox() {
     const fetchRatesList = async () => {
       try {
         const API_key = process.env.REACT_APP_EXCHANGE_RATES_API_KEY
-        const API_url = `http://api.exchangeratesapi.io/v1/latest?access_key=${API_key}`
+        const API_url = ` https://v6.exchangerate-api.com/v6/${API_key}/latest/USD`
 
         const response = await axios.get(API_url)
-
-        const currencies = Object.keys(response.data.rates)
+        const currencies = Object.keys(response.data.conversion_rates)
         const currenciesAndRate = currencies.map((key) => ({
           acronym: key,
-          rate: response.data.rates[key],
+          rate: response.data.conversion_rates[key],
         }))
 
         set_currencyList(currenciesAndRate)
