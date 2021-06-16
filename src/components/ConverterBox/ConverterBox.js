@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
 import ConverterTitle from "./ConverterTitle/ConverterTitle"
+import ConverterInfo from "./ConverterInfo/ConverterInfo"
 import "./ConverterBox.css"
 
 export default function ConverterBox() {
@@ -31,6 +32,7 @@ export default function ConverterBox() {
   return (
     <div className="converter-box">
       <ConverterTitle />
+      <ConverterInfo />
     </div>
   )
 }
