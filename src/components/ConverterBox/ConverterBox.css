@@ -6,7 +6,20 @@
   align-items: center;
   border: 1px solid #233e8b;
   margin: 20px;
-  padding: 100px 20px;
+  padding: 100px 20px 80px;
   width: 400px;
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (max-width: 481px) {
+  .converter-box {
+    padding: 70px 5px;
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 281px) {
+  .converter-box {
+    width: 250px;
+  }
 }
