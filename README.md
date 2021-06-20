@@ -13,7 +13,7 @@ All conversions can be done both ways, converting **from base** currency **to ta
 
 #### 🔍 **Step 1: Research and Benchmark** 
 
-Before I even started designing the first scopes, I did a quick internet search to see how most currency exchange websites work. From the survey, **Transferwise** (https://wise.com/) was the one I liked the most, and it became the model fot the app's **conversion feature**.
+Before I even started designing the first scopes, I did a quick internet search to see how most currency exchange websites work. From the survey, **Transferwise** (https://wise.com/) was the one I liked the most, and it became the model for the app's **conversion feature**.
 
 #### 📝 **Step 2: Drafts and Wireframe**
 
@@ -32,7 +32,7 @@ To finish the app development phase, I took one last and important step.
 Once the UI and the converter feature were built, I asked a few people to **use the app**. I got a few interesting feedbacks to improve the user experience. Lasty, I went through all the code to find **points of improvement**. And after refactoring it, the code looked much cleaner and more readable.
 
 Even so, there is a lot to improve and learn.
-Any suggestion is always welcome.
+Any suggestion is always welcomed.
 
 # The Result
 
