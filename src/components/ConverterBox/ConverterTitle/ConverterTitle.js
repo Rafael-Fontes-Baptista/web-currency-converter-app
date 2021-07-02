@@ -7,7 +7,6 @@ export default function ConverterTitle() {
       <h1>
         <span>💰</span> Web Currency Converter <span>💰</span>
       </h1>
-      <ol></ol>
     </div>
   )
 }

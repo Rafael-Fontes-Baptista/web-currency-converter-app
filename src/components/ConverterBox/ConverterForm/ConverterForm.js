@@ -8,65 +8,62 @@ export default function ConverterForm(props) {
   const [targetAmount, set_targetAmount] = useState("")
   const [targetRate, set_targetRate] = useState(0)
 
-  const executeConversion = (name, amount, base_rate, target_rate) => {
-    if (name === "targetAmount") {
-      if (base_rate && target_rate && amount) {
-        set_baseAmount(
-          (parseFloat(amount) * (base_rate / target_rate)).toFixed(2)
-        )
-      }
-    } else {
-      if (base_rate && target_rate && amount) {
-        set_targetAmount(
-          (parseFloat(amount) * (target_rate / base_rate)).toFixed(2)
-        )
-      }
+  const convertFromTargetToBase = (amount, base_rate, target_rate) => {
+    if (base_rate && target_rate && amount) {
+      set_baseAmount(
+        (parseFloat(amount) * (base_rate / target_rate)).toFixed(2)
+      )
+    }
+  }
+
+  const convertFromBaseToTarget = (amount, base_rate, target_rate) => {
+    if (base_rate && target_rate && amount) {
+      set_targetAmount(
+        (parseFloat(amount) * (target_rate / base_rate)).toFixed(2)
+      )
     }
   }
 
   const handleChange = (e) => {
     const { name, value } = e.target
 
-    if (!value) {
-      if (name === "baseAmount") return set_baseAmount("")
-      if (name === "targetAmount") return set_targetAmount("")
-    }
-
     if (name === "baseAmount") {
-      set_baseAmount(parseFloat(value))
-      executeConversion(name, value, baseRate, targetRate)
+      set_baseAmount(value)
+      convertFromBaseToTarget(value, baseRate, targetRate)
     } else if (name === "baseAcronym") {
       set_baseRate(value)
-      executeConversion(name, baseAmount, value, targetRate)
+      if (targetAmount && targetRate && !baseAmount) {
+        convertFromTargetToBase(targetAmount, value, targetRate)
+      }
+      convertFromBaseToTarget(baseAmount, value, targetRate)
     } else if (name === "targetAcronym") {
       set_targetRate(value)
-      executeConversion(name, baseAmount, baseRate, value)
+      if (targetAmount && baseRate && !baseAmount) {
+        convertFromTargetToBase(targetAmount, baseRate, value)
+      }
+      convertFromBaseToTarget(baseAmount, baseRate, value)
     } else if (name === "targetAmount") {
-      set_targetAmount(parseFloat(value))
-      executeConversion(name, value, baseRate, targetRate)
+      set_targetAmount(value)
+      convertFromTargetToBase(value, baseRate, targetRate)
     }
   }
 
   return (
-    <div>
-      <form className="converter-form">
-        <ConverterSelector
-          name="base"
-          value={baseAmount}
-          rate={baseRate}
-          inputOnChange={(e) => handleChange(e)}
-          selectOnChange={(e) => handleChange(e)}
-          currencyList={props.currencyList}
-        />
-        <ConverterSelector
-          name="target"
-          value={targetAmount}
-          rate={targetRate}
-          inputOnChange={(e) => handleChange(e)}
-          selectOnChange={(e) => handleChange(e)}
-          currencyList={props.currencyList}
-        />
-      </form>
+    <div className="converter-form">
+      <ConverterSelector
+        name="base"
+        value={baseAmount}
+        rate={baseRate}
+        onChange={handleChange}
+        currencyList={props.currencyList}
+      />
+      <ConverterSelector
+        name="target"
+        value={targetAmount}
+        rate={targetRate}
+        onChange={handleChange}
+        currencyList={props.currencyList}
+      />
     </div>
   )
 }

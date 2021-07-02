@@ -2,12 +2,11 @@ import React from "react"
 import "./ConverterSelector.css"
 
 export default function ConverterSelector(props) {
-  const inputName = `${props.name}Amount`
-  const selectName = `${props.name}Acronym`
-  const currencyList = props.currencyList
-  const mostPopularAcronyms = ["EUR", "USD", "GBP", "JPY", "BRL"]
-  const mostPopularCurrencies = currencyList.filter((item) =>
-    mostPopularAcronyms.includes(item.acronym)
+  const mostPopAcronyms = ["EUR", "USD", "GBP", "JPY", "BRL"]
+  const allCurrencies = props.currencyList
+
+  const mostPopCurrencies = allCurrencies.filter((item) =>
+    mostPopAcronyms.includes(item.acronym)
   )
 
   return (
@@ -20,34 +19,37 @@ export default function ConverterSelector(props) {
       <div className="converter-selector">
         <input
           type="number"
-          step={10}
           min={0}
           placeholder={"0,00"}
           autoComplete={"off"}
-          name={inputName}
+          name={`${props.name}Amount`}
           value={props.value}
-          onChange={props.inputOnChange}
+          onChange={props.onChange}
         ></input>
         <select
-          name={selectName}
+          name={`${props.name}Acronym`}
           value={props.rate}
-          onChange={props.selectOnChange}
+          onChange={props.onChange}
         >
           <option value={0} disabled>
             select
           </option>
           <optgroup label="Most Popular">
-            {mostPopularCurrencies.map((item, index) => (
-              <option key={index} value={item.rate}>
-                {item.acronym}
-              </option>
+            {mostPopCurrencies.map((item) => (
+              <option
+                key={item.id}
+                value={item.rate}
+                label={item.acronym}
+              ></option>
             ))}
           </optgroup>
           <optgroup label="All Currencies">
-            {currencyList.map((item, index) => (
-              <option key={index} value={item.rate}>
-                {item.acronym}
-              </option>
+            {allCurrencies.map((item) => (
+              <option
+                key={item.id}
+                value={item.rate}
+                label={item.acronym}
+              ></option>
             ))}
           </optgroup>
         </select>
